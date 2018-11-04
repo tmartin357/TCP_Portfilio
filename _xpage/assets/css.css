@@ -1,0 +1,102 @@
+:root {
+  --size: 200px;
+  --border: 1px;
+  --navH: 75px;
+}
+
+#pie {
+  width: calc(var(--size) * 2 + var(--border) * 4);
+  height: calc(var(--size) * 2 + var(--border) * 4);
+}
+
+.circle{
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: black;
+  color: white;
+  position: relative;
+  border: var(--border) solid white;
+}
+
+.circle p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.top-left{
+  border-top-left-radius: var(--size);
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  float: left;
+}
+
+.top-right{
+  border-top-left-radius: 0px;
+  border-top-right-radius: var(--size);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  float: right;
+}
+
+.bottom-left{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: var(--size);
+  border-bottom-right-radius: 0px;
+  float: left;
+}
+
+.bottom-right{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: var(--size);
+  float: right;
+}
+
+#navbar2 {
+  width: 100%;
+  height: var(--navH);
+  background: black;
+  color: white;
+}
+
+.logo {
+  width:  var(--navH);
+  height:  var(--navH);
+  background: red;
+  position: relative;
+}
+
+.logo p {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  overflow: auto;
+}
+
+.navbar2 a {
+  color:white;
+  text-decoration: none;
+  /* font-weight: bold; */
+  font-family: sans-serif;
+  font-size: 10pt;
+}

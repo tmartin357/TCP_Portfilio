@@ -1,0 +1,44 @@
+:root {
+  --back: rgb(102, 0, 0);
+  --text: rgb(204, 204, 121);
+  --alt1: #fff;
+  --alt2: #bbb;
+}
+
+body {
+  background-color: var(--back);
+  color: var(--text);
+  margin:25px;
+}
+
+li {
+  color: var(--text);
+}
+
+a:link {
+  color: var(--alt1);
+}
+
+a:visited {
+  color: var(--alt2);
+}
+
+a:hover {
+  color: var(--alt2);
+}
+
+div.polaroid {
+  width: 500px;
+  background-color: var(--alt2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img.polaroid {
+  width: 100%;
+}
+
+div.pcontainer {
+  text-align: center;
+  padding: 10px 20px;
+  color: var(--back);
+}
