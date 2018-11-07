@@ -1,7 +1,13 @@
-:root {
-  --none:0;
-}
-
 body { 
   padding-top: 65px; 
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.row {
+  padding-bottom: 10px;
 }
