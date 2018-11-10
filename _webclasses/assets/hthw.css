@@ -8,22 +8,21 @@
 body {
   background-color: var(--back);
   color: var(--text);
-  margin:25px;
 }
 
 li {
   color: var(--text);
 }
 
-a:link {
+a:link:not(.dropdown-item) {
   color: var(--alt1);
 }
 
-a:visited {
+a:visited:not(.dropdown-item) {
   color: var(--alt2);
 }
 
-a:hover {
+a:hover:not(.dropdown-item) {
   color: var(--alt2);
 }
 

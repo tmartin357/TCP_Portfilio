@@ -6,9 +6,16 @@
   </button>
   <div class="collapse navbar-collapse" id="colnavbar">
     <ul class="nav navbar-nav">
-      {% for page in site.xpage %}
-      <li class="nav-item"><a class="nav-link" href="{{ page.url }}">{{ page.title }}</a></li>
-      {% endfor %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Webmastering
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for page in site.webclasses %}
+            <a class="dropdown-item" href="{{ page.url }}">{{ page.title }}</a>
+            {% endfor %}
+        </div>
+      </li>
     </ul>
   </div>
 </nav>
