@@ -1,0 +1,107 @@
+---
+layout: default
+title: SQL Homework
+titlebar: SQL Homework
+---
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">SELECT everything from a table.</h5>
+      <p class="card-text">
+        <pre><code>SELECT * FROM songs;</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">SELECT exactly one column from a table. SELECT more than one but not all columns from a table.</h5>
+      <p class="card-text">
+        <pre><code>SELECT name FROM songs; SELECT name, length FROM songs;</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">SELECT everything from the songs table whose id numbers are even and greater than 50, or odd and less than ten.</h5>
+      <p class="card-text">
+        <pre><code>SELECT * FROM songs WHERE (id < 10 AND id % 2 = 1) OR (id % 2 = 0 AND id > 50);</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">INSERT ten new records into the User table. They can be real or finctional individsuals.</h5>
+      <p class="card-text">
+        <pre><code>INSERT INTO User (FirstName, LastName, Birthplace, CreatedAt)  
+VALUES
+  ('Bob', 'Smith', 'Tokyo, Japan', CURRENT_TIMESTAMP ), 
+  ('Fred', 'Johnson', 'Washington, D.C.', CURRENT_TIMESTAMP ), 
+  ('Jack', 'Jackson', 'Paris, France', CURRENT_TIMESTAMP ), 
+  ('Joe', 'Griffin', 'Washington, D.C.', CURRENT_TIMESTAMP ), 
+  ('Bill', 'Swatson', 'Summerland, Alaska', CURRENT_TIMESTAMP ), 
+  ('Susan', 'Victoria', 'Smallville, Alabama', CURRENT_TIMESTAMP ), 
+  ('Karen', 'Waterson', 'Atlanga, Georgia', CURRENT_TIMESTAMP ), 
+  ('Emily', 'Parker', 'Soviet, Russia', CURRENT_TIMESTAMP ), 
+  ('Cris', 'Eris', 'Axel, Belzerg', CURRENT_TIMESTAMP ), 
+  ('Jamie', 'Zee', 'Georgetown, Maine', CURRENT_TIMESTAMP );</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">UPDATE the User table and change some names. When you UPDATE, do not forget to put CURRENT_TIMESTAMP into UpdatedAt. That way, you always know when the last update was.</h5>
+      <p class="card-text">
+        <pre><code>UPDATE user set FirstName = "Adam", LastName = "West", UpdatedAt = CURRENT_TIMESTAMP WHERE UserID=1;
+UPDATE user set FirstName = "Fred", LastName = "Kroger", UpdatedAt = CURRENT_TIMESTAMP WHERE UserID=2;</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Use a TRANSACTION/ROLLBACK window to DELETE everything from the User table.</h5>
+      <p class="card-text">
+        <pre><code>BEGIN TRANSACTION;
+  DELETE FROM User; 
+ROLLBACK;</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">For each user in the User table, add a record to the Favorite table, but only INSERT for UserID (the FK), and CreatedAt.</h5>
+      <p class="card-text">
+        <pre><code>INSERT INTO Favorite (UserID, CreatedAt) VALUES (1, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (2, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (3, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (4, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (5, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (6, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (7, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (8, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (9, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (10, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (11, CURRENT_TIMESTAMP);
+INSERT INTO Favorite (UserID, CreatedAt) VALUES (12, CURRENT_TIMESTAMP);</code></pre>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Use a TRANSACTION/ROLLBACK window to DELETE everything from the Favorite table WHERE the FavoriteID is odd, or even but greater than 5. Put "SELECT * FROM Favorite;" in the window to make sure you delete only those records you should!</h5>
+      <p class="card-text">
+        <pre><code>BEGIN TRANSACTION;
+  DELETE FROM favorite WHERE (FavoriteID % 2 = 1) OR (FavoriteID % 2 = 0 AND FavoriteID > 5); 
+  select * from favorite;
+ROLLBACK;</code></pre>
+      </p>
+    </div>
+  </div>
+  <br />
+</div>
