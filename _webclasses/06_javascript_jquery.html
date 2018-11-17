@@ -1,0 +1,34 @@
+---
+layout: default
+title: JavaScript Homework
+titlebar: JavaScript Homework
+---
+<h1>Rock, Paper, Scissors</h1>
+
+<div style="width: 300px;">
+
+  <form action="" method="POST" role="form">
+    <legend>Choose your weapon</legend>
+    <div class="form-group">
+      <button id="btn-Rock" type="button" class="btn btn-default">Rock</button>
+      <button id="btn-Paper" type="button" class="btn btn-default">Paper</button>
+      <button id="btn-Scissors" type="button" class="btn btn-default">Scissors</button>
+    </div>
+  </form>
+
+  <form action="" method="POST" role="form">
+    <legend>My weapon</legend>
+    <div class="form-group">
+      <button id="cpu-Rock" type="button" class="disabled btn btn-default" disabled>Rock</button>
+      <button id="cpu-Paper" type="button" class="disabled btn btn-default" disabled>Paper</button>
+      <button id="cpu-Scissors" type="button" class="disabled btn btn-default" disabled>Scissors</button>
+    </div>
+  </form>
+
+  <div class="alert alert-primary" role="alert" id="game-result">
+    Will You Win?
+  </div>
+
+</div>
+
+<script src="assets/RPS.js"></script>
