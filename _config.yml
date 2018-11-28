@@ -44,3 +44,5 @@ plugins:
 collections:
   webclasses:
     output: true
+  jargon:
+    output: true
